@@ -1,3 +1,5 @@
+package ghanmi.com;
+
 public class First {
     public static void textAnalyse() {
         String text = "ImWinter;trage_ich Handschue.";
@@ -15,12 +17,14 @@ public class First {
                 ch[i] = (char) (ch[i]);
                 System.out.println(text);
                 System.out.println(richtigtext);
-                System.out.print((ch[i - 1]));
+                //System.out.print((ch[i - 1]));
 
 
             }
 
+
         }
+        System.out.println();
 
     }
 }
