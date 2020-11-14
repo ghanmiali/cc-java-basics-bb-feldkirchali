@@ -2,7 +2,7 @@ package ghanmi.com;
 
 public class MethodenWärhungsrechner2 {
     public static double Exchange(double amount, String currency) {
-        var exchangeRate = 0d;
+        double exchangeRate = 0;
 
         switch (currency) {
             case "CHF":
