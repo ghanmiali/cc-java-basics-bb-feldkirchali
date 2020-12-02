@@ -34,7 +34,7 @@ import java.util.stream.Collectors;
                 Files.createFile(Paths.get(filePath));
                 for (int i = 0; i < employees.length; i++) {
                     String line = employees[i] + "," + salary[i] + "\n";
-                    Files.write(Paths.get(filePath), line.getBytes(), StandardOpenOption.);
+                    Files.write(Paths.get(filePath), line.getBytes(), StandardOpenOption.APPEND);
                 }
             } catch (IOException e) {
                 System.err.println("Error writing CSV file: " + e.getMessage());
