@@ -14,7 +14,7 @@ public class PersonnenAngaben {
     private String requiredKnowledge_Qualification;
     private String phoneNum;
     private String mail;
-    Adresse adress;
+    Adresse adresse;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     private static final Pattern nam_ort_pat = Pattern.compile("^[a-zA-Z \\-]+$");
     private static final Pattern str_pat     = Pattern.compile("^[a-zA-Z]+ \\d+$");
@@ -25,12 +25,6 @@ public class PersonnenAngaben {
     public Adresse getAdresse() {
         return adresse;
     }
-
-    public void setAdresse(Adresse adresse) {
-        this.adresse = adresse;
-    }
-
-    Adresse adresse;
 
     PersonnenAngaben(String firstName, String lastName, String requiredKnowledge_Qualification, String phoneNum, String mail) {
         this.firstName = firstName;
@@ -48,19 +42,19 @@ public class PersonnenAngaben {
         this.requiredKnowledge_Qualification = requiredKnowledge_Qualification;
         this.phoneNum = phoneNum;
         this.mail = mail;
-        this.adress = new Adresse(street, HausNumber, postCode, location, Country);
+        this.adresse = new Adresse(street, HausNumber, postCode, location, Country);
 
     }
 
 
     PersonnenAngaben(String firstName, String lastName, String requiredKnowledge_qualification,
-                     String phoneNum, String mail, Adresse adress) {
+                     String phoneNum, String mail, Adresse adresse) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.requiredKnowledge_Qualification = requiredKnowledge_qualification;
         this.phoneNum = phoneNum;
         this.mail = mail;
-        this.adress = adress;
+        this.adresse = adresse;
 
     }
 
@@ -121,8 +115,8 @@ public class PersonnenAngaben {
     public PersonnenAngaben() {
 
     }
-    public void setAdress(String street, String hausNum, int postcode, String city, String country) {
-        this.adress = new Adresse(street, hausNum, postcode, city, country);
+    public void setAdresse(String street, String HausNumber, int postcode, String city, String country) {
+        this.adresse = new Adresse(street, HausNumber, postcode, city, country);
     }
     // @Override
     public String toString() {
@@ -130,7 +124,7 @@ public class PersonnenAngaben {
                 "Nachname   : " + lastName + "\n" +
                 "Level:     : " + requiredKnowledge_Qualification + "\n" +
                 "Tel        : " + phoneNum + "\n" +
-                "Mail       : " + mail+"\n"+adress);
+                "Mail       : " + mail+"\n"+adresse);
     }
 }
 
